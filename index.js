@@ -5,6 +5,15 @@ require('colors');
 const config = require("./config.js");
 const projectVersion = require('./package.json').version || "v0.0.0";
 const { readdirSync } = require('fs');
+
+const express = require('express')
+const app = express()
+
+app.get('/', function (req, res) {
+  res.send('Hello World')
+})
+
+app.listen(3000)
 require('dotenv').config();
 
 const {
