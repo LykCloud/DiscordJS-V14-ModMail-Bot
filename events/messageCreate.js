@@ -149,7 +149,7 @@ module.exports = new eventshandler.event({
                                         .setTitle(`${guild.name} - ModMail`)
                                         .setDescription('Thank you for creating a new mail, a staff member should respond to your ticket any time soon!')
                                         .setFooter({
-                                            text: '© TFA 7524, https://www.github.com/TFAGaming/DiscordJS-V14-ModMail-Bot'
+                                            text: 'LEGENDYT4K'
                                         })
                                         .setColor('Blurple')
                                 ],
