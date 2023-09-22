@@ -35,7 +35,7 @@ const client = new Client({
     ],
     presence: {
         activities: [{
-            name: "DM me to create a mail!",
+            name: "DM",
             type: 1,
             url: "https://twitch.tv/discord"
         }]
