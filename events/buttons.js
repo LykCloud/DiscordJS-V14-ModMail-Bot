@@ -49,7 +49,7 @@ module.exports = new eventshandler.event({
                 await user.send({
                     embeds: [
                         new EmbedBuilder()
-                            .setTitle('Your mail has been closed.')
+                            .setTitle('Your DM closed.')
                             .setDescription(`**${interaction.user.displayName}** has closed your mail since it's marked as completed. Thank you for using our support!`)
                             .setFooter({
                                 text: `${interaction.guild.name} devs`
@@ -58,7 +58,7 @@ module.exports = new eventshandler.event({
                 }).catch(null);
 
                 await user.send({
-                    content: 'Mail messages history:',
+                    content: 'DM messages history:',
                     files: [
                         new AttachmentBuilder(
                             Buffer.from(transcriptMessages.join('\n'), 'utf-8'), { name: 'history.txt' }
