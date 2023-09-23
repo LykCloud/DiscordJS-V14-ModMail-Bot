@@ -80,18 +80,18 @@ module.exports = new eventshandler.event({
                 const buttons = [
                     new ButtonBuilder()
                         .setCustomId('create')
-                        .setLabel('Create')
+                        .setLabel('DM')
                         .setStyle(ButtonStyle.Primary),
                     new ButtonBuilder()
                         .setCustomId('cancel')
-                        .setLabel('Cancel')
+                        .setLabel('Cancel DM')
                         .setStyle(ButtonStyle.Secondary)
                 ];
 
                 set.add(message.author.id);
 
                 const sent = await message.reply({
-                    content: `You\'re about to create a new mail with the details from the replied message, are you sure about that?\nYou have 15 seconds to select one of the buttons below. (${time(Date.now() + 15000, 'R')})`,
+                    content: `You\'re about to DM To <@917069166157119509>, are you sure about that?\nYou have 15 seconds to select one of the buttons below. (${time(Date.now() + 15000, 'R')})`,
                     components: [
                         new ActionRowBuilder()
                             .addComponents(
@@ -147,7 +147,7 @@ module.exports = new eventshandler.event({
                                 embeds: [
                                     new EmbedBuilder()
                                         .setTitle(`${guild.name} - ModMail`)
-                                        .setDescription('Thank you for creating a new mail, a staff member should respond to your ticket any time soon!')
+                                        .setDescription('Thank You For DM, How Can I Help You!')
                                         .setFooter({
                                             text: 'LEGENDYT4K'
                                         })
@@ -157,7 +157,7 @@ module.exports = new eventshandler.event({
                             });
 
                             await i.reply({
-                                content: 'Your mail has been successfully created!',
+                                content: 'Your DM has been successfully Connted!',
                                 ephemeral: true
                             });
 
@@ -187,7 +187,7 @@ module.exports = new eventshandler.event({
                                         .addComponents(
                                             new ButtonBuilder()
                                                 .setCustomId('close')
-                                                .setLabel('Close mail')
+                                                .setLabel('Close DM')
                                                 .setStyle(ButtonStyle.Primary)
                                         )
                                 ]
